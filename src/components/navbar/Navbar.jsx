@@ -11,7 +11,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    pathname!=='/login'
+    pathname!=='/login'||pathname!=='/register'
     &&
     <div className='h-full w-full fixed'>
       <div className='h-20 flex p-5 justify-between items-center bg-green-200'>
