@@ -11,10 +11,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    pathname!=='/login'||pathname!=='/register'
+    pathname!=='/login'&&pathname!=='/register'
     &&
     <div className='h-full w-full fixed'>
-      <div className='h-20 flex p-5 justify-between items-center bg-green-200'>
+      <div className='h-20 flex p-5 justify-between items-center bg-blue-200'>
         <Link href={"/"}>
           <h2 className='text-2xl font-semibold'>City of Eutopia</h2>
         </Link>
