@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/Footer'
 import React from 'react'
 
 const Register = () => {
@@ -23,6 +24,9 @@ const Register = () => {
                         <button className='px-2 py-1 bg-blue-300 rounded-md '>Submit</button>
                     </div>
                 </form>
+            </div>
+            <div className='w-screen absolute left-0 bottom-0'>
+                <Footer/>
             </div>
         </div>
     </div>
