@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Home() {
 
   return (
-    <div className='pt-[96px]'>
+    <div className='pt-[96px] bg-[#C8E8E0]'>
       <video className='w-screen h-[80vh] object-cover' autoPlay loop src="/854325-hd_1280_720_25fps.mp4" alt="logo" />
       <div className='flex justify-center py-10'>
         <div className='w-[85%]'>

@@ -1,13 +1,32 @@
+'use client'
 import Footer from '@/components/footer/Footer'
+import { signIn, useSession } from 'next-auth/react';
+import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 const Login = () => {
+    const session =useSession();
+    const router=useRouter();
+    if(session.status==="loading")
+    return<p>Loading...</p>;
+    if(session.status==="authenticated")
+    router?.push("/");
+
+    const handleSubmit=async(e)=>{
+
+        e.preventDefault();
+        const name=e.target[0].value;
+        const password=e.target[1].value;
+        signIn("credentials",{name,password})
+
+    }
   return (
     <>
-        <div className='h-screen w-screen flex flex-col justify-center items-center'>
+        <div className='h-screen w-screen flex flex-col justify-center items-center bg-[#C8E8E0]'>
             <div>
                 <div className='w-full flex flex-col items-center'>
-                    <form className='flex flex-col gap-5 items-center px-10 py-5 bg-green-100 shadow-xl rounded-md'>
+                    <form onSubmit={handleSubmit} className='flex flex-col gap-5 items-center px-10 py-5 bg-green-100 shadow-xl rounded-md'>
                     <h1 className='text-center font-semibold text-2xl py-2'>Login</h1>  
                         <div className='flex flex-col'>
                             <label className='font-semibold'>Username:</label>
@@ -19,6 +38,10 @@ const Login = () => {
                         </div>
                         <div className='flex justify-center'>
                             <button className='px-2 py-1 bg-blue-300 rounded-md '>Submit</button>
+                        </div>
+                        <div className='flex gap-1'>
+                            <p className='text-center'>Don&apos;t have an account?</p>
+                            <Link className='text-center text-blue-500' href={"/register"}>Register here</Link>
                         </div>
                     </form>
                 </div>

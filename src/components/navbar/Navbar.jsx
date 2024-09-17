@@ -1,15 +1,23 @@
 'use client'
 import { Notifications } from '@mui/icons-material';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Navbar = () => {
+  const session=useSession();
+  const [logout,setLogout]=useState(false);
+  useEffect(()=>{
+    if(session.status==="authenticated")
+    setLogout(true);
+  },[session]);
   const [isOpen, setIsOpen] = useState(false);
   const pathname=usePathname();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  console.log(session)
   return (
     pathname!=='/login'&&pathname!=='/register'
     &&
@@ -26,10 +34,11 @@ const Navbar = () => {
         <div className='hidden md:flex space-x-4 items-center font-light'>
           <Link href='/' className='text-lg'>Home</Link>
           <Link href='/about' className='text-lg'>About</Link>
+          {session?.data?.user?.admin&&<Link href='/admin_dashboard' className='text-lg'>Admin Dashboard</Link>}
           <Link href='/services' className='text-lg'>Services</Link>
           <Link href='#' className='text-lg'>Contact</Link>
           <Link href='#'><Notifications/></Link>
-          <Link href={"/login"} className='text-lg'>Login</Link>
+          {logout?<p className='cursor-pointer' onClick={signOut}>Logout</p>:<Link href={"/login"} className='text-lg'>Login</Link>}
         </div>
       </div>
       {isOpen && (
@@ -37,10 +46,11 @@ const Navbar = () => {
           <div className='flex flex-col space-y-4 p-5'>
             <Link href='/' className='text-lg'>Home</Link>
             <Link href='/about' className='text-lg'>About</Link>
+            {session?.data?.user?.admin&&<Link href='/admin_dashboard' className='text-lg'>Admin Dashboard</Link>}
             <Link href='/services' className='text-lg'>Services</Link>
             <Link href='#' className='text-lg'>Contact</Link>
             <Link href='#'><Notifications/></Link>
-            <Link href={"/login"} className='text-lg'>Login</Link>
+            {logout?<p className='cursor-pointer' onClick={signOut}>Logout</p>:<Link href={"/login"} className='text-lg'>Login</Link>}
           </div>
         </div>
       )}
