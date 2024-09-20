@@ -1,5 +1,6 @@
 import { Air, Camera, CameraFront, CarCrash, Feedback, LocationCity, PeopleAlt, Speaker } from '@mui/icons-material'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const Services = () => {
@@ -12,7 +13,7 @@ const Services = () => {
                     <Image className='h-60 object-cover' src={"/road.png"} alt="Road Condition Monitoring" width={1000} height={1000} />
                     <h2 className='text-lg font-semibold text-center text-green-700'>Road Condition Monitoring</h2>
                     <p className='text-sm text-center text-[#376358]'>Monitor road conditions for safer travel and timely maintenance alerts.</p>
-                    <button className='text-sm rounded-xl bg-green-700 px-2 py-1 text-white'>Explore</button>
+                    <Link href={"/services/road_condition"} className='text-sm rounded-xl bg-green-700 px-2 py-1 z-50 text-white'>Explore</Link>
                 </div>
                 <div className='py-5 px-2 flex flex-col items-center gap-2 rounded-lg cursor-pointer bg-white'>
                     <Image className='h-60 object-cover' src={"/crime.jpg"} alt="Real Time Crime Detection" width={1000} height={1000} />
@@ -48,7 +49,7 @@ const Services = () => {
                     <Image className='h-60 object-cover' src={"/feedback.jpg"} alt="Feedback Section" width={1000} height={1000} />
                     <h2 className='text-lg font-semibold text-center text-green-700'>Feedback Section</h2>
                     <p className='text-sm text-center text-[#376358]'>Share your thoughts and experiences for continuous improvement.</p>
-                    <button className='text-sm rounded-xl bg-green-700 px-2 py-1 text-white'>Explore</button>
+                    <Link href={"/services/feedback"} className='text-sm rounded-xl bg-green-700 px-2 py-1 text-white'>Explore</Link>
                 </div>
                 
             </div>

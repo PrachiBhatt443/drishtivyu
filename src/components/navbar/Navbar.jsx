@@ -17,11 +17,11 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  console.log(session)
+  
   return (
     pathname!=='/login'&&pathname!=='/register'
     &&
-    <div className='h-full w-full z-50 fixed'>
+    <div className='w-full fixed'>
       <div className='h-24 flex p-5 justify-between items-center bg-[#fafafa]'>
         <Link href={"/"}>
           <h2 className='text-2xl font-semibold'>Drishtivyu</h2>
