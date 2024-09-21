@@ -1,14 +1,16 @@
 'use client'
 import axios from 'axios';
+import { useSession } from 'next-auth/react';
 import React, { useState, useEffect } from 'react';
 
 const Feedback = () => {
   const [feedbackList, setFeedbackList] = useState([]);
+  const session=useSession();
 
   // Handle the checkbox change to mark feedback as resolved
   const handleCheckboxChange = async (id, resolved) => {
     try {
-      await axios.put(`/api/feedback/${id}`, { resolved }, {
+      await axios.put(`/api/feedback/${id}`, {name:session?.data?.user?.name, resolved }, {
         headers: {
           'Content-Type': 'application/json',
         },

@@ -21,6 +21,7 @@ const handler = NextAuth({
             );
             if (isPasswordCorrect) {
               // Return user object with admin status
+              console.log(user._id);
               return {
                 id: user._id,
                 name: user.name,

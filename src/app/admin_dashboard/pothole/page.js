@@ -1,12 +1,14 @@
 'use client'
 import axios from 'axios';
+import { useSession } from 'next-auth/react';
 import React, { useState, useEffect } from 'react';
 
 const Pothole = () => {
   const [potholeData, setPotholeData] = useState([]);
+  const session=useSession();
   const handleCheckboxChange = async (id, resolved) => {
     try {
-      await axios.put(`/api/pothole/${id}`, { resolved }, {
+      await axios.put(`/api/pothole/${id}`, { name:session?.data?.user?.name,resolved }, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -33,7 +35,7 @@ const Pothole = () => {
     };
     fetchData();
   }, []);
-console.log(potholeData)
+  
   return (
     <div className='min-h-screen bg-[#C8E8E0] py-40'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
