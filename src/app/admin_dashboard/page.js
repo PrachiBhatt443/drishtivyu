@@ -1,10 +1,12 @@
 'use client'
+import Footer from '@/components/footer/Footer';
 import Notifications from '@/components/notifications/Notifications'
 import Link from 'next/link';
 import React from 'react';
 
 const AdminDashboard = () => {
   return (
+    <>
     <div className='pt-[80px] bg-[#F0F4F8] min-h-screen flex flex-col justify-center items-center'>
       <h1 className='text-4xl font-bold text-gray-800 mb-12'>Admin Dashboard</h1>
       
@@ -28,6 +30,8 @@ const AdminDashboard = () => {
         {/* <Notifications /> */}
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

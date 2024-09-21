@@ -1,4 +1,5 @@
 'use client'
+import Footer from '@/components/footer/Footer';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
 import React, { useState, useEffect } from 'react';
@@ -37,6 +38,7 @@ const Pothole = () => {
   }, []);
   
   return (
+    <>
     <div className='min-h-screen bg-[#C8E8E0] py-40'>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className='text-3xl font-semibold text-gray-800 mb-6 text-center'>Pothole Complaints</h1>
@@ -74,6 +76,8 @@ const Pothole = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 
   // Handle the checkbox change

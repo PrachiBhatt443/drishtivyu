@@ -10,8 +10,8 @@ export default function Home() {
       <div className='flex justify-center py-10'>
         <div className='w-[85%]'>
           <h1 className='text-2xl'>News</h1>
-          <div className='flex justify-between gap-24 pt-2'>
-            <div className='flex flex-col gap-1 w-[30%] bg-slate-200 border-[1px] border-gray-300 rounded-md h-[450px] overflow-hidden'>
+          <div className='flex md:flex-row flex-col justify-between gap-24 pt-2'>
+            <div className='flex flex-col gap-1 md:w-[30%] bg-slate-200 border-[1px] border-gray-300 rounded-md h-[450px] overflow-hidden'>
               <Image className='rounded-t-md' src="/smc5.jpg" alt="logo" width={1000} height={1000} />
               <div className='p-4 flex flex-col gap-2'>
                   <h1 className='text-lg font-semibold'>Major Tech Conference Announced</h1>
@@ -20,7 +20,7 @@ export default function Home() {
                   </p>
               </div>
             </div>
-            <div className='flex flex-col w-[30%] gap-1 bg-slate-200 border-[1px] border-gray-300 rounded-md h-[450px] overflow-hidden'>
+            <div className='flex flex-col md:w-[30%] gap-1 bg-slate-200 border-[1px] border-gray-300 rounded-md h-[450px] overflow-hidden'>
               <Image className='rounded-t-md' src="/smc5.jpg" alt="logo" width={1000} height={1000} />
               <div className='p-4 flex flex-col gap-2'>
                   <h1 className='text-lg font-semibold'>Stock Prices Surge Amid Positive Earnings Reports</h1>
@@ -29,7 +29,7 @@ export default function Home() {
                   </p>
               </div>
             </div>
-            <div className='flex flex-col w-[30%] gap-1 bg-slate-200 border-[1px] border-gray-300 rounded-md h-[450px] overflow-hidden'>
+            <div className='flex flex-col md:w-[30%] gap-1 bg-slate-200 border-[1px] border-gray-300 rounded-md h-[450px] overflow-hidden'>
                 <Image className='rounded-t-md' src="/smc5.jpg" alt="logo" width={1000} height={1000} />
                 <div className='p-4 flex flex-col gap-2'>
                   <h1 className='text-lg font-semibold'>New Study Reveals Benefits of a Plant-Based Diet</h1>

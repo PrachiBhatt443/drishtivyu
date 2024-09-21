@@ -1,4 +1,5 @@
 'use client'
+import Footer from '@/components/footer/Footer';
 import React, { useEffect, useState } from 'react';
 import { AiFillWarning } from "react-icons/ai"; // Icon for AQI Status
 import { FaCloud, FaSpinner } from 'react-icons/fa'; // Icons for pollutants and spinner
@@ -50,6 +51,7 @@ const Airquality = () => {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-r from-[#C8E8E0] to-[#A1D4E4] py-40 flex justify-center items-center">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Air Quality Index</h1>
@@ -89,6 +91,8 @@ const Airquality = () => {
         )}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
