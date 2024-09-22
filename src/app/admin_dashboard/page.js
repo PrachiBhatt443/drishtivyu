@@ -24,6 +24,11 @@ const AdminDashboard = () => {
             <p className="text-gray-600">Review user feedback and suggestions to improve services and infrastructure.</p>
           </div>
         </Link>
+        <Link href="/admin_dashboard/rating_charts">
+          <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Rating Charts</h2>This analysis helps identify trends and areas for improvement.
+          </div>
+        </Link>
       </div>
 
       <div className='mt-12 w-full max-w-4xl'>
