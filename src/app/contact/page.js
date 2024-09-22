@@ -1,10 +1,12 @@
 // pages/contact.js
 import React from 'react';
 import { Container, Typography, TextField, Button, Grid, Box } from '@mui/material';
+import Footer from '@/components/footer/Footer';
 
 const Contact = () => {
   return (
-    <Container maxWidth="md" sx={{ py: 5 }}>
+    <div className='bg-[#C8E8E0]'>
+    <Container maxWidth="md" sx={{ py: 30 }}>
       <Typography variant="h3" align="center" gutterBottom>
         Get in Touch
       </Typography>
@@ -58,6 +60,8 @@ const Contact = () => {
         </Box>
       </Box>
     </Container>
+    <Footer/>
+    </div>
   );
 };
 

@@ -42,6 +42,7 @@ const Navbar = () => {
             <Link href='/about' className='text-lg'>About</Link>
             {session?.data?.user?.admin && <Link href='/admin_dashboard' className='text-lg'>Dashboard</Link>}
             <Link href='/services' className='text-lg'>Services</Link>
+            <Link href='/Rate' className='text-lg'>Rate</Link>
             <Link href='/contact' className='text-lg'>Contact</Link>
 
             {/* Profile section with dropdown */}
@@ -80,6 +81,7 @@ const Navbar = () => {
               <Link href='/about' className='text-lg'>About</Link>
               {session?.data?.user?.admin && <Link href='/admin_dashboard' className='text-lg'>Dashboard</Link>}
               <Link href='/services' className='text-lg'>Services</Link>
+              <Link href='/Rate' className='text-lg'>Rate</Link>
               <Link href='/contact' className='text-lg'>Contact</Link>
 
               {isLoggedIn ? (

@@ -9,7 +9,7 @@ const Services = () => {
     <div className='pt-[80px] bg-[#C8E8E0]'>
         <div className='py-24 px-16'>
         <div className="text-center text-4xl pb-12 font-semibold text-green-700">Our Features & Services</div>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
                 <div className='py-5 px-2 flex flex-col justify-center items-center gap-2 rounded-lg cursor-pointer bg-white'>
                     <Image className='h-60 object-cover' src={"/road.png"} alt="Road Condition Monitoring" width={1000} height={1000} />
                     <h2 className='text-lg font-semibold text-center text-green-700'>Road Condition Monitoring</h2>

@@ -15,6 +15,7 @@ import {
 import { Star as StarIcon } from '@mui/icons-material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useSession } from 'next-auth/react';
+import Footer from '@/components/footer/Footer';
 
 const theme = createTheme({
   palette: {
@@ -116,6 +117,9 @@ console.log(session)
   }
 
   return (
+    <>
+
+    <div className='bg-[#C8E8E0]'>
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm" sx={{ py: 20 }}>
         <Card elevation={3}>
@@ -170,6 +174,9 @@ console.log(session)
         />
       </Container>
     </ThemeProvider>
+    </div>
+    <Footer/>
+    </>
   );
 };
 

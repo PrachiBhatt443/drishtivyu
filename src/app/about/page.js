@@ -1,10 +1,13 @@
 // pages/about.js
 import React from 'react';
 import { Container, Typography, Box, Button, Divider } from '@mui/material';
+import Footer from '@/components/footer/Footer';
 
 const About = () => {
   return (
-    <Container maxWidth="md" sx={{ py: 5 }}>
+    <>
+
+    <Container maxWidth="xl" sx={{ backgroundColor: '#C8E8E0', minHeight: '100vh', py: 30 }}>
       <Typography variant="h3" align="center" gutterBottom>
         About Our Initiative
       </Typography>
@@ -44,6 +47,8 @@ const About = () => {
         Share Your Feedback
       </Button>
     </Container>
+    <Footer/>
+    </>
   );
 };
 

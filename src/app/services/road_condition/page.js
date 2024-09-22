@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
+import Footer from '@/components/footer/Footer';
 
 const RoadCondition = () => {
   const [image, setImage] = useState(null);
@@ -77,6 +78,7 @@ const RoadCondition = () => {
   };
 
   return (
+    <>
     <div className="py-40 px-4 min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-xl">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
@@ -152,6 +154,8 @@ const RoadCondition = () => {
         )}
       </div>
     </div>
+      <Footer/>
+    </>
   );
 };
 

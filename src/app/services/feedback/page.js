@@ -1,4 +1,5 @@
 'use client'
+import Footer from '@/components/footer/Footer';
 import { useSession } from 'next-auth/react';
 import React, { useState } from 'react'
 
@@ -43,6 +44,7 @@ const Feedback = () => {
       };
     
     return (
+      <>
     <div className='min-h-screen bg-[#C8E8E0] py-40'>
         <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto p-6 bg-white shadow-md rounded-md space-y-4">    
           <div>
@@ -105,6 +107,8 @@ const Feedback = () => {
           </button>
         </form>
     </div>
+      <Footer/>
+      </>
 );
 }
 

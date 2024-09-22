@@ -12,6 +12,7 @@ import {
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useSession } from 'next-auth/react';
+import Footer from '@/components/footer/Footer';
 
 const theme = createTheme({
   palette: {
@@ -85,8 +86,10 @@ const AdminDashboard = () => {
   console.log('Sample chart data (Anonymous):', prepareChartData('crimeReduction', false));
 
   return (
+    <>
+
     <ThemeProvider theme={theme}>
-      <Container maxWidth="lg" sx={{ py: 20 }}>
+      <Container maxWidth="xl" sx={{ backgroundColor: '#C8E8E0',py: 20 }}>
         <Typography variant="h4" component="h1" gutterBottom align="center">
           Admin Dashboard
         </Typography>
@@ -149,6 +152,8 @@ const AdminDashboard = () => {
         )}
       </Container>
     </ThemeProvider>
+    <Footer/>
+    </>
   );
 };
 
